@@ -1,0 +1,73 @@
+.. #Favourite Movies DataBase...Code..
+
+#!/usr/bin/python
+import sqlite3
+conn = sqlite3.connect('test.db')
+print("Opened database successfully")
+
+#!/usr/bin/python
+import sqlite3
+conn = sqlite.connect('test.db')
+print("Opened database successfully")
+conn.execite('''CREATE TABLE FAVOURITE MOVIE COMPANY (ID INT PRIMARY KEY NOT NULL,
+               MOVIE NAME TEXT NOT NULL, STARRING TEXT NOT NULL,
+              DIRECTOR TEXT NOT NULL,YEAR OF RELEASE)''')
+
+print("Table created successfully")
+conn.close()
+conn.connect(test.db)
+print("Opened database successfully")
+conn.execute("INSERT IN TO FAVORITE MOVIE COMPANY(ID, MOVIE NAME,STARRING, DIRECTOR, YEAR OF RELEASE
+               )\VALUES(1,'Varsham','Prabhas Trisha','Veeru Potla',2004)")
+
+
+conn.execute("INSERT IN TO FAVORITE MOVIE COMPANY(ID, MOVIE NAME,STARRING, DIRECTOR, YEAR OF RELEASE)\
+             VALUES(2,'Draling','Prabhas Kajal Aggarwal','Karunakaran',2010)")
+
+conn.execute("INSERT IN TO FAVORITE MOVIE COMPANY(ID, MOVIE NAME,STARRING, DIRECTOR, YEAR OF RELEASE)\
+             VALUES(3,'Mirchi','Prabhas Anushka Shetty','Koratala Shiva',2013)")
+
+conn.execute("INSERT IN TO FAVORITE MOVIE COMPANY(ID, MOVIE NAME,STARRING, DIRECTOR, YEAR OF RELEASE)\
+              VALUES(4,'Saaho','Prabhas Shraddha Kapoor','Sujeeth',2018)")
+conn.commit()
+print("Records created successfully")
+conn.close()
+
+
+#above python program create record successfully.
+
+#following python program fecth and display the above code
+
+#!/usr/bin/python
+import sqlite3
+conn = sqlite3.connect('test.db')
+print("Opened database successfully")
+cursor = conn.execute("SELECT ID, MOVIE NAME,STARRING,DIRECTOR,YEAR OF RELEASE")
+
+for row in cursor:
+      
+          row "ID = ",            row[0]    
+          row "MOVIE NAME = ",    row[1]           
+          row "STARRING = ",      row[2]          
+          row "DIRECTOR = ",       row[3]          
+          row "YEAR OF RELEASE = ", row[4] , "\n"          
+
+print("Operation done successfully")
+
+conn.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
